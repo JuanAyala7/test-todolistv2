@@ -6,7 +6,8 @@ const PORT = process.env.PORT || 3000;
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const _ = require("lodash");
-require('dotenv').config();
+const dotenv = require('dotenv').config();
+const url = process.env.ATLAS_URL
 
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
@@ -16,6 +17,7 @@ app.use(express.static("public"));
 //mongoose.connect("mongodb://localhost:27017/todolistDB");
 
 mongoose.set('strictQuery', false);
+mongoose.connect("mongodb+srv://JuanAyala98:0184270-Ja@cluster0.ajxfrut.mongodb.net/todolistDB", {useNewUrlParser: true, useUnifiedTopology: true }); // ==> use this if deprect a warning
 
 //#----MongoDB ATLAS Connection----//
 mongoose.connect(process.env.ATLAS_URL, {
