@@ -15,8 +15,8 @@ app.use(express.static("public"));
 //mongoose.connect("mongodb://localhost:27017/todolistDB");
 
 mongoose.set('strictQuery', false);
-mongoose.connect("mongodb+srv://JuanAyala98:0184270-Ja@cluster0.ajxfrut.mongodb.net/todolistDB", {useNewUrlParser: true}); // ==> use this if deprect a warning
-mongoose.connection.once('open', function(){
+mongoose.createConnection("mongodb+srv://JuanAyala98:0184270-Ja@cluster0.ajxfrut.mongodb.net/todolistDB", {useNewUrlParser: true}); // ==> use this if deprect a warning
+mongoose.createConnection('open', function(){
       console.log('Conection has been made!');
     }).on('error', function(error){
         console.log('Error is: ', error);
