@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 3000;
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const _ = require("lodash");
-//const dotenv = require('dotenv').config()
+const dotenv = require('dotenv').config()
 
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
