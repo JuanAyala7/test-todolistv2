@@ -20,7 +20,7 @@ mongoose.connect("mongodb+srv://JuanAyala98:0184270-Ja@cluster0.ajxfrut.mongodb.
 
 
 //#----MongoDB ATLAS Connection----//
-//mongoose.createConnection(process.env.ATLAS_URL);
+mongoose.createConnection(process.env.ATLAS_URL);
 
 const itemsSchema = {
   name: String
