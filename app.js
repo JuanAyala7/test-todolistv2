@@ -16,7 +16,7 @@ app.use(express.static("public"));
 //mongoose.connect("mongodb://localhost:27017/todolistDB");
 
 mongoose.set('strictQuery', false);
-mongoose.connect("process.env.ATLAS_URL", {useNewUrlParser: true}); // ==> use this if deprect a warning
+mongoose.connect(process.env.ATLAS_URL, {useNewUrlParser: true}); // ==> use this if deprect a warning
 
 
 //#----MongoDB ATLAS Connection----//
