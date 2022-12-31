@@ -2,11 +2,11 @@
 
 const express = require("express");
 const app = express();
+require("dotenv").config();
 const PORT = process.env.PORT || 3000;
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const _ = require("lodash");
-const dotenv = require('dotenv').config()
 
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
@@ -20,7 +20,7 @@ mongoose.connect(process.env.ATLAS_URL, {useNewUrlParser: true}); // ==> use thi
 
 
 //#----MongoDB ATLAS Connection----//
-mongoose.createConnection(process.env.ATLAS_URL);
+//mongoose.createConnection(process.env.ATLAS_URL);
 
 const itemsSchema = {
   name: String
